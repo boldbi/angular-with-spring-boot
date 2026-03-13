@@ -29,49 +29,26 @@ This project demonstrates how to render dashboards from your **Bold BI server** 
 
 ---
 
-# Configuration
+## Configuration
 
-### Enable Embed Authentication
+* Ensure embed authentication is enabled on the `embed settings` page. If it is not enabled, follow these [instructions](https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code?utm_source=github&utm_medium=backlinks) to enable it.
 
-Ensure **Embed Authentication** is enabled in the **Embed Settings** page.
+    ![Embed Settings](/images/enable-embedsecretkey.png)
 
-If it is not enabled, follow the instructions in the official documentation:
+* To download the `embedConfig.json` file, follow this [link](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file?utm_source=github&utm_medium=backlinks). See the images below for guidance.
 
-[https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code?utm_source=github&utm_medium=backlinks](https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code?utm_source=github&utm_medium=backlinks)
+    ![Embed Settings Download](/images/download-embedsecretkey.png)
+    ![EmbedConfig Properties](/images/embedconfig-file.png)
 
-![Embed Settings](images/enable-embedsecretkey.png)
+* Copy the downloaded `embedConfig.json` into the project at the expected location (the sample's `angular` and `nodejs` folders include examples of where to place it). 
 
----
-
-### Download Embed Configuration
-
-Download the **embedConfig.json** file by following this documentation:
-
-[https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file?utm_source=github&utm_medium=backlinks](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file?utm_source=github&utm_medium=backlinks)
-
-Refer to the images below for guidance.
-
-![Embed Settings Download](images/download-embedsecretkey.png)
-
-![EmbedConfig Properties](images/embedconfig-file.png)
-
----
-
-### Place the Configuration File
-
-Copy the downloaded **embedConfig.json** file into the required location in the project.
-
-The sample project contains folders showing where the configuration file should be placed.
-
-![EmbedConfig Location](images/embedconfig-location.png)
-
----
+    ![EmbedConfig image](/images/embedconfig-location.png)
 
 # Running the Sample
 
 # Running the Spring Boot Backend
 
-1. Open the **Spring Boot project folder** in Visual Studio Code.
+1. Open the **spring-boot** in Visual Studio Code.
 
 2. Make sure the following VS Code extensions are installed:
 
@@ -98,10 +75,10 @@ http://localhost:8080
 
 ## Angular Frontend
 
-1. Navigate to the **Angular** folder.
+1. Navigate to the **angular** folder.
 
 ```bash
-cd Angular
+cd angular
 ```
 
 2. Install dependencies
@@ -130,21 +107,5 @@ Open this URL in your browser to view the embedded dashboard.
 
 * Do **not store passwords or sensitive information** directly in configuration files.
 * In production environments, store secrets securely using services like **Azure Key Vault** or other secret management systems.
-
----
-
-# Online Demo
-
-Live demo:
-
-[https://samples.boldbi.com/embed?utm_source=github&utm_medium=backlinks](https://samples.boldbi.com/embed?utm_source=github&utm_medium=backlinks)
-
----
-
-# Documentation
-
-Full Bold BI Embedding documentation:
-
-[https://help.boldbi.com/embedded-bi/javascript-based/?utm_source=github&utm_medium=backlinks](https://help.boldbi.com/embedded-bi/javascript-based/?utm_source=github&utm_medium=backlinks)
 
 ---
